@@ -4,6 +4,7 @@ import { GridContent } from '@ant-design/pro-layout';
 import React from 'react';
 import { FormattedMessage, useIntl } from 'umi';
 import styles from './index.less';
+import Register from './register111';
 
 const CodePreview: React.FC = ({ children }) => (
   <pre className={styles.pre}>
@@ -17,42 +18,46 @@ const Home: React.FC = () => {
   const intl = useIntl();
 
   return (
-    <div>
+    <>
       <div className={styles.Header_login_wrap}>
-        <div className={styles.Header_headerLoginImg}>
+        <div className={styles.Header_headerLoginImg} />
 
+        <div className={styles.Header_logins__fL__R}>
+          <span className={styles.LoginCollection_home_contain}>
+            <Register />
+          </span>
         </div>
       </div>
       <GridContent>
-      
-      <Card>
-        <Alert
-          message={intl.formatMessage({
-            id: 'pages.welcome.alertMessage',
-            defaultMessage: 'Faster and stronger heavy-duty components have been released.',
-          })}
-          type="success"
-          showIcon
-          banner
-          style={{
-            margin: -12,
-            marginBottom: 24,
-          }}
-        />
-        <Typography.Text strong>
-          <a
-            href="https://procomponents.ant.design/components/table"
-            rel="noopener noreferrer"
-            target="__blank"
-          >
-            <FormattedMessage id="pages.welcome.link" defaultMessage="Welcome" />
-          </a>
-        </Typography.Text>
-        <CodePreview>yarn add @ant-design/pro-components</CodePreview>
-      </Card>
-    </GridContent>
-    </div>
-    
+
+        <Card>
+          <Alert
+            message={intl.formatMessage({
+              id: 'pages.welcome.alertMessage',
+              defaultMessage: 'Faster and stronger heavy-duty components have been released.',
+            })}
+            type="success"
+            showIcon
+            banner
+            style={{
+              margin: -12,
+              marginBottom: 24,
+            }}
+          />
+          <Typography.Text strong>
+            <a
+              href="https://procomponents.ant.design/components/table"
+              rel="noopener noreferrer"
+              target="__blank"
+            >
+              <FormattedMessage id="pages.welcome.link" defaultMessage="Welcome" />
+            </a>
+          </Typography.Text>
+          <CodePreview>yarn add @ant-design/pro-components</CodePreview>
+        </Card>
+      </GridContent>
+    </>
+
   );
 };
 
