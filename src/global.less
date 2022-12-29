@@ -13,6 +13,7 @@ body,
 .ant-layout {
   min-height: 100vh;
 }
+
 .ant-pro-sider.ant-layout-sider.ant-pro-sider-fixed {
   left: unset;
 }
@@ -37,12 +38,15 @@ ol {
   .ant-table {
     width: 100%;
     overflow-x: auto;
-    &-thead > tr,
-    &-tbody > tr {
-      > th,
-      > td {
+
+    &-thead>tr,
+    &-tbody>tr {
+
+      >th,
+      >td {
         white-space: pre;
-        > span {
+
+        >span {
           display: block;
         }
       }
@@ -51,8 +55,9 @@ ol {
 }
 
 // Compatible with IE11
-@media screen and(-ms-high-contrast: active), (-ms-high-contrast: none) {
-  body .ant-design-pro > .ant-layout {
+@media screen and(-ms-high-contrast: active),
+(-ms-high-contrast: none) {
+  body .ant-design-pro>.ant-layout {
     min-height: 100vh;
   }
 }
@@ -60,4 +65,53 @@ ol {
 
 #root .ant-form-inline .ant-form-item {
   margin-right: 5px;
+}
+
+#root .ant-pro-top-nav-header {
+  padding: 0px;
+  height: 64px;
+  line-height: 44px;
+  width: 1200px;
+  margin: 0 auto;
+  // background: transparent;
+  box-shadow: 0px 0px 0px 0px transparent;
+  font-weight: 700;
+  font-size: 16px;
+}
+
+#root .ant-pro-top-nav-header-main {
+  padding-left: 0px;
+}
+
+#root .ant-pro-basicLayout-content {
+  margin: 0;
+  background: linear-gradient(180deg, #dcf0ff 0%, #f5f6fa 100%) no-repeat;
+  // background-size: 100% 30%;
+}
+
+#root .ant-select .ant-select-selector {
+  border: 0px;
+
+}
+
+#root .ant-select .ant-select-selection-item {
+  line-height: 40px;
+  text-align: center;
+}
+
+#root .ant-input:focus,
+.ant-input-focused {
+  box-shadow: none;
+}
+
+#root .ant-input-group.ant-input-group-compact>*:not(:last-child) {
+  margin-right: 0;
+}
+
+#root .ant-select-focused {
+  border: 0px;
+}
+
+#root .ant-input-group.ant-input-group-compact {
+  display: flex;
 }

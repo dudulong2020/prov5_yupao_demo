@@ -1,5 +1,11 @@
 @import (reference) '~antd/es/style/themes/index';
 
+.home_bg {
+  background: linear-gradient(180deg, #dcf0ff 0%, #f5f6fa 100%) no-repeat;
+  background-size: 100% 30%;
+
+}
+
 .pre {
   margin: 12px 0;
   padding: 12px 20px;
@@ -53,7 +59,7 @@
   height: 44px;
   border-radius: 4px;
   padding: 0 12px;
-  color: rgba(0,0,0,.85);
+  color: rgba(0, 0, 0, .85);
   background: #fff;
 }
 
@@ -65,7 +71,7 @@
   width: 226px;
   height: 44px;
   padding: 0 12px;
-  color: rgba(0,0,0,.85);
+  color: rgba(0, 0, 0, .85);
   background: #fff;
   border-radius: 4px;
 }
@@ -117,4 +123,60 @@
     color: #fff;
     line-height: 17px;
   }
+}
+
+
+.home_content_search {
+  margin: 40px 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+// .searchInput {
+//   display: flex;
+//   width: fit-content;
+// }
+
+// .searchInput_top {
+//   display: flex;
+// }
+
+.searchInput_search_input_wrap {
+  width: 760px;
+  height: 56px;
+  border-radius: 4px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-right: 20px;
+  border: 2px solid #0092ff;
+  background: #fff;
+}
+
+.searchInput_search_input_button {
+  width: 144px;
+  height: 52px;
+  background-color: #0092ff;
+  font-size: 16px;
+  font-weight: 700;
+  // color: #fff;
+  // display: flex;
+  // justify-content: center;
+  // align-items: center;
+  // cursor: pointer;
+  // border-radius: 0 4px 4px 0;
+}
+
+.searchInput_tabcard {
+  margin-top: 15px;
+}
+
+.searchInput_tabcard_tag {
+  padding: 3px 8px;
+  margin-right: 8px;
+  border-radius: 2px;
+  background: #fff;
+  color: #0092ff;
+  cursor: pointer;
 }
