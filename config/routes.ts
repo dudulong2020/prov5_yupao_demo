@@ -49,6 +49,12 @@
     component: './TableList',
   },
   {
+    name: 'project',
+    // icon: 'table',
+    path: '/project',
+    component: './ProjectList',
+  },
+  {
     path: '/',
     redirect: '/welcome',
   },

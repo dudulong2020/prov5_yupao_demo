@@ -1,11 +1,20 @@
 // import { PageContainer } from '@ant-design/pro-components';
-import { Alert, Card, Layout, Typography, Input, Select, Button, Divider } from 'antd';
+import { Alert, Card, Layout, Typography, Input, Select, Button, Divider, Carousel } from 'antd';
 import { SearchOutlined, SendOutlined } from '@ant-design/icons';
 import { GridContent } from '@ant-design/pro-layout';
 import React from 'react';
 import { FormattedMessage, useIntl } from 'umi';
 import styles from './index.less';
 import Register from './register111';
+
+import FactoryImg from '../../assets/home_img_factory_banner.png';
+import BottomImg01 from '../../assets/home_img_logistic_banner.png';
+import BottomImg02 from '../../assets/home_img_ypbx_banner.png';
+import RightImg01 from '../../assets/home_img_ypgcy_banner.png';
+import RightImg02 from '../../assets/home_img_ypgdjg_banner.png';
+import RightImg03 from '../../assets/home_img_ypgdkq_banner.png';
+import RightImg04 from '../../assets/home_img_ypsyxj_banner.png';
+
 
 const { Option } = Select;
 const { Search } = Input;
@@ -17,6 +26,22 @@ const CodePreview: React.FC = ({ children }) => (
     </code>
   </pre>
 );
+
+const RightImgs = [
+  { id: 1, name: "", address: RightImg01 },
+  { id: 2, name: "", address: RightImg02 },
+  { id: 3, name: "", address: RightImg03 },
+  { id: 4, name: "", address: RightImg04 },
+]
+
+const contentStyle: React.CSSProperties = {
+  margin: 0,
+  height: '178px',
+  // color: '#fff',
+  lineHeight: '178px',
+  // textAlign: 'center',
+  // background: '#364d79',
+};
 
 const Home: React.FC = () => {
   const intl = useIntl();
@@ -34,7 +59,6 @@ const Home: React.FC = () => {
       </div>
       {/* <GridContent className={styles.home_bg}> */}
       <GridContent>
-
         <div className={styles.home_top_wrap}>
           <div className={styles.home_content_search}>
             <div className={styles.searchInput}>
@@ -79,7 +103,41 @@ const Home: React.FC = () => {
 
           </div>
 
-          <div className={styles.Category_top_categorybox}></div>
+          <div className={styles.category_top_categorybox}>
+            <div className={styles.category_top_categorybox_left}>
+
+            </div>
+            <div className={styles.category_top_categorybox_right}>
+              <div className={styles.category_pic_left}>
+                <a>
+                  <img src={FactoryImg} alt='工厂' className={styles.category_Factory_img} />
+                </a>
+                <Carousel autoplay={true}
+                // afterChange={onChange}
+                >
+                  <div>
+                    <img src={BottomImg01} style={contentStyle} alt='工厂' className={styles.category_bottom_img} />
+                  </div>
+                  <div>
+                    <img src={BottomImg02} style={contentStyle} alt='工厂' className={styles.category_bottom_img} />
+                  </div>
+                </Carousel>
+              </div>
+              <div className={styles.category_pic_right}>
+
+                {
+                  RightImgs.map((item, index) => (
+                    <a className={styles.category_pic_right_box} key={index}>
+                      <img src={item.address} alt='工厂' className={styles.category_pic_right_item} />
+                    </a>
+                  ))
+                }
+
+
+              </div>
+            </div>
+          </div>
+
 
         </div>
 
